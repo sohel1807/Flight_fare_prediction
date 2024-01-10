@@ -47,4 +47,4 @@ if st.button("Predict Fare"):
                            "Total_Stops":[stops],"Dminutes":[abs(total_time)],"Journey_date":[date],"Journey_month":[month],
                            "deph":[dept_time1],"depm":[dept_time2],"Arrivalh":[arrival_time1],"Arrivalm":[arrival_time2]})
     result=data.predict(input_df)[0]
-    st.text(f"Predicted Fare :{round(result)} RS")
+    st.text(f"# Predicted Fare :{round(result)} RS")
