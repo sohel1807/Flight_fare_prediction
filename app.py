@@ -13,7 +13,7 @@ airl=['IndiGo', 'Air India', 'Jet Airways', 'SpiceJet',
 source=['Banglore', 'Kolkata', 'Delhi', 'Chennai', 'Mumbai']
 destination=['New Delhi', 'Banglore', 'Cochin', 'Kolkata', 'Delhi', 'Hyderabad']
 stops=[0,1,2,3,4]
- months = {"January": 1,
+months = {"January": 1,
            "February": 2,
            "March": 3, 
            "April": 4, 
