@@ -31,7 +31,7 @@ pip install streamlit
 run project on local machine:
 
 ```bash
-streamlit run loan.py
+streamlit run app.py
 ```
 web application run...
 
