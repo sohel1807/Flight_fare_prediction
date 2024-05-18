@@ -1,4 +1,7 @@
 # Flying Price Prediction Webapp
+## overview
+A flight fare prediction web application combines data analytics, machine learning, and user-centric design to help travelers find the best deals on flights by predicting fare changes.
+
 ## Software requirements
 1. [VSCODEIDE](https://code.visualstudio.com/)
 2. [Github Account](https://github.com/)
