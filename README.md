@@ -40,7 +40,9 @@ The web application will start running.
 ## API Usage
 
 ### Endpoint
-`https://sohel1807--fare-predict.modal.run`
+**URL:** `https://sohel1807--fare-predict.modal.run`
+**Method:** `POST`
+**Content-Type:** `application/json`
 
 ### Input Parameters
 - **Airline**: The airline operating the flight.
