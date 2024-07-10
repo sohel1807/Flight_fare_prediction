@@ -7,7 +7,7 @@ The Flight Fare Prediction Web App combines data analytics, machine learning, an
 
 ### Endpoint
 **URL:** `https://sohel1807--fare-predict.modal.run`  
-**Method:** `POST`
+**Method:** `POST`  
 **Content-Type:** `application/json`
 
 ### Input Parameters
