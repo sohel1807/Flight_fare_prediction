@@ -3,44 +3,10 @@
 ## Overview
 The Flight Fare Prediction Web App combines data analytics, machine learning, and user-centric design to help travelers find the best deals on flights by predicting fare changes.
 
-## Software Requirements
-1. [VSCode IDE](https://code.visualstudio.com/)
-2. [GitHub Account](https://github.com/)
-3. [Git CLI](https://git-scm.com/downloads)
-4. [Streamlit](https://streamlit.io/cloud)
-5. [Data Source](https://www.kaggle.com/)
-
-## Getting Started
-
-### 1. Clone the Repository
-Clone the repository to your local machine:
-
-```bash
-git clone https://github.com/sohel1807/Flight_fare_prediction.git
-```
-
-### 2. Navigate to the Project Directory
-```bash
-cd Flight_fare_prediction
-```
-
-### 3. Install Dependencies
-```bash
-pip install streamlit
-```
-
-### 4. Run the Development Server
-Run the project on your local machine:
-```bash
-streamlit run app.py
-```
-
-The web application will start running.
-
 ## API Usage
 
 ### Endpoint
-**URL:** `https://sohel1807--fare-predict.modal.run`
+**URL:** `https://sohel1807--fare-predict.modal.run`  
 **Method:** `POST`
 **Content-Type:** `application/json`
 
@@ -78,6 +44,40 @@ The web application will start running.
    "predicted_fare (Rs)": 4500
 }
 ```
+
+## Software Requirements
+1. [VSCode IDE](https://code.visualstudio.com/)
+2. [GitHub Account](https://github.com/)
+3. [Git CLI](https://git-scm.com/downloads)
+4. [Streamlit](https://streamlit.io/cloud)
+5. [Data Source](https://www.kaggle.com/)
+
+## Getting Started
+
+### 1. Clone the Repository
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/sohel1807/Flight_fare_prediction.git
+```
+
+### 2. Navigate to the Project Directory
+```bash
+cd Flight_fare_prediction
+```
+
+### 3. Install Dependencies
+```bash
+pip install streamlit
+```
+
+### 4. Run the Development Server
+Run the project on your local machine:
+```bash
+streamlit run app.py
+```
+
+The web application will start running.
 
 ## Contributing
 If you'd like to contribute to the project, feel free to fork the repository, make your changes, and submit a pull request. Contributions are welcome and appreciated!
