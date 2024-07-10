@@ -1,7 +1,7 @@
-# Flying Price Prediction Webapp
+# Flight Fare Prediction Web App
 
 ## Overview
-A flight fare prediction web application combines data analytics, machine learning, and user-centric design to help travelers find the best deals on flights by predicting fare changes.
+The Flight Fare Prediction Web App combines data analytics, machine learning, and user-centric design to help travelers find the best deals on flights by predicting fare changes.
 
 ## Software Requirements
 1. [VSCode IDE](https://code.visualstudio.com/)
@@ -12,8 +12,6 @@ A flight fare prediction web application combines data analytics, machine learni
 
 ## Getting Started
 
-To use the flight fare prediction web application, follow these steps:
-
 ### 1. Clone the Repository
 Clone the repository to your local machine:
 
@@ -22,20 +20,17 @@ git clone https://github.com/sohel1807/Flight_fare_prediction.git
 ```
 
 ### 2. Navigate to the Project Directory
-
 ```bash
 cd Flight_fare_prediction
 ```
 
 ### 3. Install Dependencies
-
 ```bash
 pip install streamlit
 ```
 
 ### 4. Run the Development Server
 Run the project on your local machine:
-
 ```bash
 streamlit run app.py
 ```
@@ -44,10 +39,20 @@ The web application will start running.
 
 ## API Usage
 
-You can also use the provided API to predict flight fares. Here is the API endpoint and a sample input:
-
 ### Endpoint
 `https://sohel1807--fare-predict.modal.run`
+
+### Input Parameters
+- **Airline**: The airline operating the flight.
+- **Source**: The departure city.
+- **Destination**: The arrival city.
+- **Total_Stops**: The number of stops in the flight.
+- **Journey_date**: The date of travel.
+- **Journey_month**: The month of travel.
+- **Departure_hour**: The hour of departure.
+- **Departure_minute**: The minute of departure.
+- **Arrival_hour**: The hour of arrival.
+- **Arrival_minute**: The minute of arrival.
 
 ### Sample Input
 ```json
@@ -73,10 +78,7 @@ You can also use the provided API to predict flight fares. Here is the API endpo
 ```
 
 ## Contributing
-
 If you'd like to contribute to the project, feel free to fork the repository, make your changes, and submit a pull request. Contributions are welcome and appreciated!
 
 ## Issues
-
 If you encounter any issues or have suggestions for improvement, please open an issue on GitHub, and we'll address it as soon as possible.
-
