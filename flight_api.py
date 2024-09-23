@@ -1,4 +1,4 @@
-from modal import Stub, Image, Mount, web_endpoint
+from modal import App, Image, Mount, web_endpoint
 from typing import Dict
 import pandas as pd
 import pickle
@@ -8,9 +8,9 @@ from datetime import time
 image = Image.debian_slim().pip_install("scikit-learn", "pandas")
 
 # Create a Modal Stub
-stub = Stub(name="flight-fare-prediction", image=image)
+app = App(name="flight-fare-prediction", image=image)
 
-@stub.function(mounts=[Mount.from_local_file("C:/Users/HPW/Documents/flyingproject/main.pkl",remote_path='/root/main.pkl')])
+@app.function(mounts=[Mount.from_local_file("C:/Users/HPW/Documents/flyingproject/main.pkl",remote_path='/root/main.pkl')])
 @web_endpoint(label="fare-predict", method="POST")
 def predict_fare(info: Dict):
     # Load the trained model
