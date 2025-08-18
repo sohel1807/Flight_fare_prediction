@@ -1,4 +1,5 @@
-from modal import App, Image, Mount, web_endpoint
+import modal
+from modal import App, Image, fastapi_endpoint
 from typing import Dict
 import pandas as pd
 import pickle
@@ -10,12 +11,23 @@ image = Image.debian_slim().pip_install("scikit-learn", "pandas")
 # Create a Modal Stub
 app = App(name="flight-fare-prediction", image=image)
 
-@app.function(mounts=[Mount.from_local_file("C:/Users/HPW/Documents/flyingproject/main.pkl",remote_path='/root/main.pkl')])
-@web_endpoint(label="fare-predict", method="POST")
+app = modal.App.lookup('my-app', create_if_missing=True)
+
+
+sb = modal.Sandbox.create(
+    app=app,
+    image=modal.Image.debian_slim().add_local_file(
+        local_path="C:/Users/HPW/OneDrive/Documents/flyingproject/main.pkl",
+        remote_path="/root/main.pkl"
+    )
+)
+
+@app.function()
+@fastapi_endpoint(label="fare-predict", method="POST")
 def predict_fare(info: Dict):
+    
     # Load the trained model
-    with open("/root/main.pkl", "rb") as f:
-        main = pickle.load(f)
+    main = sb.open("main.pkl", "rb")
     
     # Define valid options
     airline_options = ['IndiGo', 'Air India', 'Jet Airways', 'SpiceJet', 'Multiple carriers', 

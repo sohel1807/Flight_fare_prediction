@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flight Fare Prediction</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✈️ Flight Fare Prediction</h1>
+    <form id="fareForm">
+      <label>Airline:</label>
+      <input type="text" id="Airline" required><br>
+
+      <label>Source:</label>
+      <input type="text" id="Source" required><br>
+
+      <label>Destination:</label>
+      <input type="text" id="Destination" required><br>
+
+      <label>Total Stops:</label>
+      <input type="number" id="Total_Stops" min="0" max="4" required><br>
+
+      <label>Journey Date:</label>
+      <input type="number" id="Journey_date" min="1" max="31" required><br>
+
+      <label>Journey Month:</label>
+      <select id="Journey_month" required>
+        <option>January</option><option>February</option><option>March</option>
+        <option>April</option><option>May</option><option>June</option>
+        <option>July</option><option>August</option><option>September</option>
+        <option>October</option><option>November</option><option>December</option>
+      </select><br>
+
+      <label>Departure Time (HH:MM):</label>
+      <input type="number" id="deph" min="0" max="23" required> :
+      <input type="number" id="depm" min="0" max="59" required><br>
+
+      <label>Arrival Time (HH:MM):</label>
+      <input type="number" id="Arrivalh" min="0" max="23" required> :
+      <input type="number" id="Arrivalm" min="0" max="59" required><br>
+
+      <button type="submit">Predict Fare</button>
+    </form>
+
+    <h2 id="result"></h2>
+  </div>
+
+  <script>
+    document.getElementById("fareForm").addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      const data = {
+        Airline: document.getElementById("Airline").value,
+        Source: document.getElementById("Source").value,
+        Destination: document.getElementById("Destination").value,
+        Total_Stops: document.getElementById("Total_Stops").value,
+        Journey_date: document.getElementById("Journey_date").value,
+        Journey_month: document.getElementById("Journey_month").value,
+        deph: document.getElementById("deph").value,
+        depm: document.getElementById("depm").value,
+        Arrivalh: document.getElementById("Arrivalh").value,
+        Arrivalm: document.getElementById("Arrivalm").value
+      };
+
+      const response = await fetch("/predict", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+      document.getElementById("result").innerText = result["Predicted Fare (Rs)"]
+        ? `💰 Predicted Fare: ₹${result["Predicted Fare (Rs)"]}`
+        : `Error: ${result.error}`;
+    });
+  </script>
+</body>
+</html>
