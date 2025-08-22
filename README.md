@@ -90,7 +90,7 @@ You can easily run the app using the Docker image hosted on Docker Hub:
 ```bash
 docker pull sohel1807/flight-fare-prediction
 docker run -p 8501:8501 sohel1807/flight-fare-prediction
-
+```
 
 The web application will start running.
 
@@ -99,4 +99,5 @@ If you'd like to contribute to the project, feel free to fork the repository, ma
 
 ## Issues
 If you encounter any issues or have suggestions for improvement, please open an issue on GitHub, and we'll address it as soon as possible.
+
 
