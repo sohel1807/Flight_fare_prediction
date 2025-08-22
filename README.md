@@ -51,6 +51,7 @@ The Flight Fare Prediction Web App combines data analytics, machine learning, an
 3. [Git CLI](https://git-scm.com/downloads)
 4. [Streamlit](https://streamlit.io/cloud)
 5. [Data Source](https://www.kaggle.com/)
+6. [Docker](https://www.docker.com/)
 
 ## Getting Started
 
@@ -77,6 +78,20 @@ Run the project on your local machine:
 streamlit run app.py
 ```
 
+## Run with Docker
+
+You can easily run the app using the Docker image hosted on Docker Hub:
+
+- **Image:** `sohel1807/flight-fare-prediction`
+- **Docker Hub page:** https://hub.docker.com/r/sohel1807/flight-fare-prediction
+
+### Pull and Run the Docker Container
+
+```bash
+docker pull sohel1807/flight-fare-prediction
+docker run -p 8501:8501 sohel1807/flight-fare-prediction
+
+
 The web application will start running.
 
 ## Contributing
@@ -84,3 +99,4 @@ If you'd like to contribute to the project, feel free to fork the repository, ma
 
 ## Issues
 If you encounter any issues or have suggestions for improvement, please open an issue on GitHub, and we'll address it as soon as possible.
+
